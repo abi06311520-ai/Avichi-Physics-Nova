@@ -43,7 +43,7 @@ export default defineConfig({
               bcp47 = parsed.bcp47 || 'en-IN';
             }
             const key = bcp47.trim();
-            const voiceName = MALE_INDIAN_NEURAL_VOICES[key] || MALE_INDIAN_NEURAL_VOICES[key.split('-')] || 'en-IN-PrabhatNeural';
+            const voiceName = MALE_INDIAN_NEURAL_VOICES[key] || MALE_INDIAN_NEURAL_VOICES[key.split('-')[0]] || 'en-IN-PrabhatNeural';
             const cacheKey = voiceName + '::' + text;
             if (ttsAudioCache.has(cacheKey)) {
               const cached = ttsAudioCache.get(cacheKey)!;
