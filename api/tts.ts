@@ -1,3 +1,4 @@
+﻿import { Buffer } from 'node:buffer';
 import { MsEdgeTTS, OUTPUT_FORMAT } from 'msedge-tts';
 const MALE_INDIAN_NEURAL_VOICES: Record<string, string> = {
   'ta-IN': 'ta-IN-ValluvarNeural',
